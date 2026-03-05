@@ -1,0 +1,38 @@
+{
+  "profile": {
+    "name": "Daniel",
+    "handle": "@danielemarino",
+    "verified": false,
+    "headshot_path": null,
+    "theme": "dark"
+  },
+  "slides": [
+    {
+      "id": 1,
+      "tweets": ["Ich habe meinen gesamten Content-Workflow mit Claude Code automatisiert. In 10 Minuten. Hier ist wie:"],
+      "image_placeholder": true,
+      "image_description": "Screenshot eines Terminals mit Claude Code"
+    },
+    {
+      "id": 2,
+      "tweets": ["Früher: 2 Stunden pro Carousel. Recherche, Bilder suchen, Layout bauen, Text schreiben.", "Heute: 1 Befehl. Claude erledigt alles."],
+      "image_placeholder": false
+    },
+    {
+      "id": 3,
+      "tweets": ["Das System besteht aus 3 Teilen:\n\n1. Ein Claude Skill (/carousel)\n2. Einem Python-Script für die Bildgenerierung\n3. Einer CLAUDE.md mit deinem Profil"],
+      "image_placeholder": false
+    },
+    {
+      "id": 4,
+      "tweets": ["Das Python-Script nutzt Pillow um jeden Slide zu rendern. 1080x1350px, dein Avatar, dein Handle, automatische Textzeilenumbrüche."],
+      "image_placeholder": true,
+      "image_description": "Beispiel eines fertigen Carousel-Slides"
+    },
+    {
+      "id": 5,
+      "tweets": ["Du willst das auch? Follow mir für mehr solcher Workflows.", "Alle Scripts gibt es kostenlos in meinem GitHub."],
+      "image_placeholder": false
+    }
+  ]
+}

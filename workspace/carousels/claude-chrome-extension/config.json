@@ -1,0 +1,52 @@
+{
+  "profile": {
+    "name": "Daniel",
+    "handle": "@danielemarino",
+    "verified": false,
+    "headshot_path": null,
+    "theme": "dark"
+  },
+  "slides": [
+    {
+      "id": 1,
+      "tweets": ["Claude kann deinen Browser steuern.\n\nHier ist der Prompt, der alles veraendert:"],
+      "image_placeholder": true,
+      "image_description": "Claude Extension Logo oder Browser-Screenshot mit Claude-Interface"
+    },
+    {
+      "id": 2,
+      "tweets": ["Die Claude Chrome Extension ist kein Chatbot.\n\nSie ist ein Agent — sie liest, klickt, scrollt und fuellt Formulare aus. Alles was du im Browser machst, kann Claude uebernehmen."],
+      "image_placeholder": false
+    },
+    {
+      "id": 3,
+      "tweets": ["Das Problem: Die meisten nutzen sie wie ChatGPT.\n\nSie fragen. Claude antwortet. Fertig.\n\nDabei liegt die echte Power im Prompt-Design."],
+      "image_placeholder": false
+    },
+    {
+      "id": 4,
+      "tweets": ["Der Prompt der funktioniert:\n\nOeffne [URL], extrahiere alle [Daten], trage sie in [Ziel] ein und sende mir eine Zusammenfassung.\n\nEin Satz. Komplett automatisiert."],
+      "image_placeholder": false
+    },
+    {
+      "id": 5,
+      "tweets": ["Konkrete Beispiele die ich taeglich nutze:\n\n→ LinkedIn-Profile analysieren & in Notion speichern\n→ Formulare automatisch ausfuellen\n→ Preise vergleichen und Tabelle erstellen\n→ E-Mails zusammenfassen & antworten"],
+      "image_placeholder": false
+    },
+    {
+      "id": 6,
+      "tweets": ["Der Schluessel: Kontext geben, nicht Schritte.\n\nSchlecht: Klick auf Tab 1, dann scroll, dann...\nGut: Mein Ziel ist X. Die Seite sieht so aus: [URL]\n\nClaude findet den Weg selbst."],
+      "image_placeholder": false
+    },
+    {
+      "id": 7,
+      "tweets": ["Bonus: Claude merkt sich den Kontext im ganzen Tab.", "Du kannst mitten in der Session neue Anweisungen geben — er baut darauf auf."],
+      "image_placeholder": false
+    },
+    {
+      "id": 8,
+      "tweets": ["Welchen Browser-Task willst du als erstes automatisieren?\n\nSchreib es in die Kommentare — ich zeige dir den passenden Prompt. 👇"],
+      "image_placeholder": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "linkedin-dashboard",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/danielemarino/linkedin-dashboard"],
+      "port": 5173,
+      "autoPort": true
+    },
+    {
+      "name": "inbound-audit",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/danielemarino/.cursor-tutor"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

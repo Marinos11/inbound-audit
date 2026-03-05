@@ -1,0 +1,86 @@
+{
+  "profile": {
+    "name": "Daniel",
+    "handle": "@danielemarino",
+    "verified": false,
+    "headshot_path": null,
+    "theme": "light"
+  },
+  "slides": [
+    {
+      "id": 1,
+      "tweets": [
+        "9 von 10 Boards reden über AI. Aber kaum einer redet über Daten – so wie er sollte."
+      ],
+      "image_placeholder": true,
+      "image_description": "Siddarth Rajagopal Portrait oder Buchcover 'Data as the 4th Pillar'"
+    },
+    {
+      "id": 2,
+      "tweets": [
+        "Das Problem: Jeder erkennt die Wichtigkeit von Daten.",
+        "Aber niemand weiß, wie man damit wirklich umgeht."
+      ],
+      "image_placeholder": false
+    },
+    {
+      "id": 3,
+      "tweets": [
+        "Unternehmen bauen massenhaft Daten-Tools – und hoffen dann, dass die Leute sie nutzen.\n\nDas ist rückwärts gedacht."
+      ],
+      "image_placeholder": false
+    },
+    {
+      "id": 4,
+      "tweets": [
+        "Ein Pharma-Konzern kaufte denselben Datensatz (100.000€) fünfmal – weil die Abteilungen nicht wussten, was die anderen haben.\n\nDas ist kein Tech-Problem. Das ist ein Data-Governance-Problem."
+      ],
+      "image_placeholder": true,
+      "image_description": "Illustration: Mehrere Abteilungen kaufen dieselben Daten separat"
+    },
+    {
+      "id": 5,
+      "tweets": [
+        "Data als 4. Pillar bedeutet:\n\nNicht nur People, Process & Tech –\nsondern Daten gleichwertig daneben stellen."
+      ],
+      "image_placeholder": false
+    },
+    {
+      "id": 6,
+      "tweets": [
+        "Die besten Data Leader kommen aus dem Business.",
+        "Sie lernen Daten dazu – nicht umgekehrt."
+      ],
+      "image_placeholder": false
+    },
+    {
+      "id": 7,
+      "tweets": [
+        "Audi-Beispiel: Ein Data Leader entdeckte auf dem Shopfloor, dass Schweißtemperatur genauso wichtig ist wie Kamera-Bilder für die Qualitätskontrolle.\n\nDu findest das nicht im Büro."
+      ],
+      "image_placeholder": true,
+      "image_description": "Audi Produktionslinie / Schweißroboter Shopfloor"
+    },
+    {
+      "id": 8,
+      "tweets": [
+        "Bevor du dem Business sagst:\n'Ihr müsst datengetrieben werden'\n\n→ Schau erstmal in den Spiegel.\nBist DU als Data Leader wirklich datengetrieben?"
+      ],
+      "image_placeholder": false
+    },
+    {
+      "id": 9,
+      "tweets": [
+        "Egal ob dein CEO AI vorantreibt oder abwartet:\n\nOhne solide Datenfundamente wirst du in keinem Szenario gewinnen."
+      ],
+      "image_placeholder": false
+    },
+    {
+      "id": 10,
+      "tweets": [
+        "Welches Daten-Problem blockiert gerade dein Unternehmen am meisten?\n\n↓ Schreib es in die Kommentare."
+      ],
+      "image_placeholder": false
+    }
+  ]
+}
