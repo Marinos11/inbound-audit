@@ -1,12 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.VITE_SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const apifyToken = process.env.APIFY_API_TOKEN;
-
-// Initialize Supabase client with service role key for cron jobs
-const supabase = createClient(supabaseUrl!, supabaseServiceKey!);
 
 // Apify LinkedIn scraper actor ID
 const APIFY_LINKEDIN_ACTOR = 'apify/linkedin-company-posts-scraper';
@@ -39,15 +35,25 @@ export async function GET(request: NextRequest) {
   try {
     console.log('LinkedIn post scraping cron job triggered');
 
-    // 1. Fetch all clients from Supabase
-    const { data: clients, error: clientsError } = await supabase
-      .from('clients')
-      .select('id, linkedin_url')
-      .not('linkedin_url', 'is', null);
+    // 1. Fetch all clients from Supabase using REST API
+    const clientsResponse = await fetch(
+      `${supabaseUrl}/rest/v1/clients?select=id,linkedin_url&linkedin_url=not.is.null`,
+      {
+        headers: {
+          'Authorization': `Bearer ${supabaseServiceKey}`,
+          'apikey': supabaseServiceKey!,
+          'Content-Type': 'application/json'
+        }
+      }
+    );
 
-    if (clientsError) {
-      throw new Error(`Failed to fetch clients: ${clientsError.message}`);
+    if (!clientsResponse.ok) {
+      throw new Error(
+        `Failed to fetch clients from Supabase: ${clientsResponse.status} ${clientsResponse.statusText}`
+      );
     }
+
+    const clients = await clientsResponse.json();
 
     if (!clients || clients.length === 0) {
       console.log('No clients with LinkedIn URLs found');
@@ -88,18 +94,28 @@ export async function GET(request: NextRequest) {
         }));
 
         // Upsert posts (ignore duplicates based on unique constraint)
-        const { error: insertError, data: inserted } = await supabase
-          .from('linkedin_posts')
-          .upsert(postsToInsert, {
-            onConflict: 'client_id,post_url'
-          })
-          .select('id');
+        const insertResponse = await fetch(
+          `${supabaseUrl}/rest/v1/linkedin_posts?on_conflict=client_id,post_url`,
+          {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${supabaseServiceKey}`,
+              'apikey': supabaseServiceKey!,
+              'Content-Type': 'application/json',
+              'Prefer': 'resolution=merge-duplicates'
+            },
+            body: JSON.stringify(postsToInsert)
+          }
+        );
 
-        if (insertError) {
-          throw new Error(`Failed to insert posts for client ${client.id}: ${insertError.message}`);
+        if (!insertResponse.ok) {
+          throw new Error(
+            `Failed to insert posts for client ${client.id}: ${insertResponse.status} ${insertResponse.statusText}`
+          );
         }
 
-        totalScraped += inserted?.length || 0;
+        const inserted = await insertResponse.json();
+        totalScraped += Array.isArray(inserted) ? inserted.length : 0;
         console.log(`Scraped ${postsToInsert.length} posts for client ${client.id}`);
       } catch (error) {
         const errorMsg = error instanceof Error ? error.message : 'Unknown error';
